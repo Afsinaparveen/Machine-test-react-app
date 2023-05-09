@@ -11,6 +11,32 @@ import bag from "../../images/bag.png";
 import bangle from "../../images/bangle.png";
 import necklace from "../../images/necklace.png";
 import fullimage from "../../images/fullimage.png";
+import uparrow from "../../images/up-arrow.svg";
+import downarrow from "../../images/downarrow.svg";
+import Swiper from 'swiper';
+import 'swiper/css';
+// const swiper = new Swiper();
+const swiper = new Swiper('.swiper', {
+    // Optional parameters
+    direction: 'vertical',
+    loop: true,
+  
+    // If we need pagination
+    pagination: {
+      el: '.swiper-pagination',
+    },
+  
+    // Navigation arrows
+    navigation: {
+      nextEl: '.button-next',
+      prevEl: '.button-prev',
+    },
+  
+    // And if we need scrollbar
+    scrollbar: {
+      el: '.swiper-scrollbar',
+    },
+  });
 function body() {
     return (
         <>
@@ -51,11 +77,11 @@ function body() {
                                     </div>
                                     <div class="swiper-arrow">
                                         <div class="button-prev">
-                                            <img class="center" src="../Afsina parveen-machine test/images/up-arrow.svg"
+                                            <img class="center" src={uparrow}
                                                 alt="image" width="14" height="20" />
                                         </div>
                                         <div class="button-next">
-                                            <img class="center" src="../Afsina parveen-machine test/images/downarrow.svg"
+                                            <img class="center" src={downarrow}
                                                 alt="image" />
                                         </div>
                                     </div>
@@ -68,7 +94,6 @@ function body() {
                         </div>
                     </div>
                 </div>
-
                 <div class="container-sub">
                     <div class="section-2">
                         <div class="section2-left">
@@ -99,7 +124,7 @@ function body() {
                         </div>
                         <div class="section2-right">
                             <div class="bis">
-                                <img class="gold" src={bis} alt="image" />
+                                <img class="gold" src={bis} />
                             </div>
                         </div>
                     </div>
@@ -108,13 +133,13 @@ function body() {
                     <div class="section3">
                         <div class="collections">
                             <div class="collection1">
-                                <img src={slide3} />
+                                <img src={slide1} />
                             </div>
                             <div class="collection1">
                                 <img src={slide2} />
                             </div>
                             <div class="collection1">
-                                <img src={slide1} />
+                                <img src={slide3} />
                             </div>
                         </div>
                     </div>
